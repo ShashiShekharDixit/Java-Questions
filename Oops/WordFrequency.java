@@ -1,18 +1,23 @@
 import java.util.HashMap;
-import java.util.Map;
 
-public class WordFrequency {
+public class WordFrequencySimple {
     public static void main(String[] args) {
         String text = "Hello world! Hello Java. Java is fun, and Java is powerful.";
-        text = text.toLowerCase().replaceAll("[^a-z A-Z 0-9\\s]", ""); 
-        String[] words = text.split("\\s+");
-        Map<String, Integer> freqMap = new HashMap<>();
+        text = text.toLowerCase().replaceAll("[^a-z0-9 ]", "");
+
+        String[] words = text.split(" ");
+        HashMap<String, Integer> map = new HashMap<>();
+
         for (String word : words) {
-            freqMap.put(word, freqMap.getOrDefault(word, 0) + 1);
+            if (map.containsKey(word)) {
+                map.put(word, map.get(word) + 1); 
+            } else {
+                map.put(word, 1); 
+            }
         }
-        System.out.println("Word Frequency:");
-        for (Map.Entry<String, Integer> entry : freqMap.entrySet()) {
-            System.out.println(entry.getKey() + " -> " + entry.getValue());
+
+        for (String word : map.keySet()) {
+            System.out.println(word + " -> " + map.get(word));
         }
     }
 }
