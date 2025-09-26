@@ -40,7 +40,7 @@ class FixedSquare {
 }
 public class LSPDemo {
     public static void main(String[] args) {
-        System.out.println("=== LSP Violation Example ===");
+        System.out.println("== LSP Violation ==");
         Rectangle rect = new Rectangle();
         rect.setWidth(5);
         rect.setHeight(10);
@@ -51,7 +51,7 @@ public class LSPDemo {
         sq.setHeight(10);
         System.out.println("Square area = " + sq.getArea()); 
 
-        System.out.println("\n=== Fixed Version (Composition) ===");
+        System.out.println("\n== Fixed Version (Composition) ==");
         FixedSquare fixedSq = new FixedSquare(10);
         System.out.println("FixedSquare area = " + fixedSq.getArea()); 
     }

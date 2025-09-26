@@ -12,10 +12,10 @@ class CreditCardPayment implements PaymentMethod {
     }
 }
 
-class PayPalPayment implements PaymentMethod {
+class GooglePayPayment implements PaymentMethod {
     @Override
     public void pay(double amount) {
-        System.out.println("Paid $" + amount + " with PayPal");
+        System.out.println("Paid $" + amount + " with Google Pay");
     }
 }
 
@@ -45,7 +45,7 @@ public class PaymentApp {
         logger.log("Starting Payment App...");
         PaymentProcessor processor = new PaymentProcessor();
         processor.addPayment(new CreditCardPayment());
-        processor.addPayment(new PayPalPayment());
+        processor.addPayment(new GooglePayPayment());
         processor.processPayments(250.0);
         logger.log("Payments completed successfully.");
     }
