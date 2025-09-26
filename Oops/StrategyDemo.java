@@ -12,7 +12,6 @@ class Order {
         return discountStrategy.applyDiscount(price);
     }
 }
-
 public class StrategyDemo {
     public static void main(String[] args) {
         Order order1 = new Order(1000, price -> price);

@@ -31,7 +31,7 @@ class PersonCopy {
     }
 }
 
-public class CloneablePitfallsDemo {
+public class CloneablePitfalls {
     public static void main(String[] args) throws CloneNotSupportedException {
         System.out.println("-> Cloneable Pitfall <-");
         List<String> hobbies1 = new ArrayList<>();

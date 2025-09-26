@@ -1,4 +1,4 @@
-public class OrderDemo {
+public class OrderItems {
     public static void main(String[] args) {
         Order original = new Order();
         original.addItem(new Item("Apple", 5));

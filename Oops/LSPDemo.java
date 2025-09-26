@@ -11,7 +11,6 @@ class Rectangle {
         return width * height;
     }
 }
-
 class Square extends Rectangle {
     @Override
     void setWidth(int width) {

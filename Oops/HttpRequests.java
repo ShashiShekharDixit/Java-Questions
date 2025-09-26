@@ -39,7 +39,7 @@ class HttpRequest {
         }
     }
 }
-public class HttpRequestDemo {
+public class HttpRequests {
     public static void main(String[] args) {
         HttpRequest request = new HttpRequest.Builder()
                 .url("https://www.google.com/")

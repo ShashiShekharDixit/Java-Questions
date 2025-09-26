@@ -37,7 +37,7 @@ class NotifierFactory {
         throw new IllegalArgumentException("Unknown notifier type: " + type);
     }
 }
-public class FactoryMapDemo {
+public class FactoryMap {
     public static void main(String[] args) {
         Notifier email = NotifierFactory.createNotifier("email");
         email.send("Welcome to our service!");
