@@ -13,7 +13,7 @@ class VectorRenderer implements Renderer {
     public void renderCircle(float radius) {
         System.out.println("Drawing Circle with radius " + radius + " using Vectors.");
     }
-    public void renderRectangle(float width, float hSeight) {
+    public void renderRectangle(float width, float height) {
         System.out.println("Drawing Rectangle " + width + "x" + height + " using Vectors.");
     }
 }
@@ -46,7 +46,7 @@ class Rectangle extends Shape {
         renderer.renderRectangle(width, height);
     }
 }
-public class Bridge {
+public class BridgePattern {
     public static void main(String[] args) {
         Renderer vector = new VectorRenderer();
         Renderer raster = new RasterRenderer();
